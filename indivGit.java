@@ -20,11 +20,8 @@ public class indivGit {
                     System.out.println("NO NUMBERS DETECTED PLEASE TRY AGAIN.");
                     continue;
                 }
-                try {
-                    Thread.sleep(userTime * 1000); // Wait for the specified time
-                } catch (InterruptedException e) {
-                    System.out.println("ERROR STARTING TIMER.");
-                }
+                
+                timerFunc(userTime);
             }
 
             else if (userInput.charAt(0) == '2') {
@@ -53,5 +50,15 @@ public class indivGit {
         }
 
         
+    }
+
+    public static boolean timerFunc (int waitTime){
+        try {
+            Thread.sleep(waitTime * 1000); // Wait for the specified time
+            return true; // If the timer worked return true
+        } catch (InterruptedException e) {
+            System.out.println("ERROR STARTING TIMER.");
+            return false; // If the timer failed return false
+        }
     }
 }
