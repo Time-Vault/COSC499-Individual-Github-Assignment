@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 public class indivGit {
@@ -25,18 +24,17 @@ public class indivGit {
             }
 
             else if (userInput.charAt(0) == '2') {
-                long startTime = System.currentTimeMillis(), endTime;
-                System.out.println("Please press enter when you want to stop the timer.");
+                System.out.println("Please enter the amount of hellos you want");
+                int userHellos;
                 try {
-                    System.in.read();
-                    endTime = System.currentTimeMillis();
-                } catch (IOException e) {
-                    System.out.println("THERE WAS AN ERROR WHILE WAITING FOR/TAKING IN USER INPUT. PLEASE TRY AGAIN.");
+                    userHellos = userScanner.nextInt();
+                    userScanner.nextLine(); // Reset the scanner
+                } catch (Exception e) {
+                    System.out.println("NO NUMBERS DETECTED PLEASE TRY AGAIN.");
                     continue;
                 }
                 
-                System.out.println("Total time: "+(endTime-startTime)/1000+" seconds");
-                userScanner.nextLine(); // Reset the scanner
+                System.out.println(multiHelloFunc(userHellos));
             }
 
             else if (userInput.charAt(0) == '3') {
@@ -60,5 +58,13 @@ public class indivGit {
             System.out.println("ERROR STARTING TIMER.");
             return false; // If the timer failed return false
         }
+    }
+
+    public static String multiHelloFunc (int helloNum){
+        String helloString = "";
+        for(int i = 0; i<helloNum; i++){
+            helloString += "hello";
+        }
+        return helloString;
     }
 }
