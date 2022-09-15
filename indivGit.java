@@ -6,7 +6,7 @@ public class indivGit {
         boolean exitCode = false; // Used to determine if the user wants to quit
 
         while (!exitCode) {
-            System.out.println("Please select an option:\n1 - Timer\n2 - Stop Watch\n3 - Exit");
+            System.out.println("Please select an option:\n1 - Timer\n2 - Multihello\n3 - Exit");
             String userInput = userScanner.nextLine();// Take user input
 
             if (userInput.charAt(0) == '1') {
