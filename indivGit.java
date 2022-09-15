@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class indivGit {
+    //THIS IS A TEST COMMIT!!!!
     public static void main(String[] args) {
         Scanner userScanner = new Scanner(System.in);
         boolean exitCode = false; // Used to determine if the user wants to quit
